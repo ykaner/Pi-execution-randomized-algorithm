@@ -22,7 +22,7 @@ public class PiExecution
 		in.next();
 		System.out.println("start executing Pi");
 		while(!cmd.equals("exit")){
-		    totalPoints *= 1.1;
+		    totalPoints *= 1.3;
     		long insidePoints = 0;
     		double x, y;
     		for(long i = 0; i < totalPoints; i++){
@@ -47,7 +47,7 @@ public class PiExecution
     		pi *= 4; // division by r^2
     		
     		System.out.println("for this time pi executed as: " + pi);
-    		System.out.println("for exit type : \"exit\"");
+		System.out.println("checked points: " + totalPoints);
     		cmd = in.next();
     		
 		}
