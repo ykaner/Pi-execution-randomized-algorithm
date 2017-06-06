@@ -12,7 +12,9 @@ public class PiExecution
 		Random rnd = new Random();
 		Scanner in = new Scanner(System.in);
 		
-		long totalPoints = 10000000;
+		long totalPoints = 10000000;//10 000 000
+		long insidePoints = 0;
+		long i = 0;
 		String cmd = "continue";
 		System.out.println("instructions: ");
 		System.out.println("exit    stop");
@@ -22,10 +24,9 @@ public class PiExecution
 		in.next();
 		System.out.println("start executing Pi");
 		while(!cmd.equals("exit")){
-		    totalPoints *= 1.3;
-    		long insidePoints = 0;
+		    totalPoints *= 1.5;
     		double x, y;
-    		for(long i = 0; i < totalPoints; i++){
+    		for(; i < totalPoints; i++){
     		    x = rnd.nextDouble();
         		y = rnd.nextDouble();
         		//randoming a point (x, y) in the square [(0, 0), (1, 1)]
@@ -47,9 +48,8 @@ public class PiExecution
     		pi *= 4; // division by r^2
     		
     		System.out.println("for this time pi executed as: " + pi);
-		System.out.println("checked points: " + totalPoints);
+    		System.out.println("checked points: " + totalPoints);
     		cmd = in.next();
-    		
 		}
 		
 	}
